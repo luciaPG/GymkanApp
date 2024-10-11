@@ -1,0 +1,124 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.wrapper {
+  margin: 3rem;
+  border: 2px solid rgb(0, 255, 0); /* Add green border */
+  height: calc(100vh - 6rem); /* Adjust height to account for margin */
+  width: calc(100vw - 6rem); /* Adjust width to account for margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Ensure the background inside the border is black */
+}
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: rgb(0, 255, 0);
+  padding: 3rem;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  position: relative; /* Ensure elements are positioned relative to this container */
+}
+.welcome-screen .typewriter {
+  position: absolute;
+  top: 20%; /* Adjust as needed */
+  width: 100%;
+  font-size: 2rem; /* Adjust font size for smaller screens */
+}
+.welcome-screen .submitDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.welcome-screen .submitDiv form {
+  position: absolute;
+  top: 60%; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome-screen .submitDiv form input {
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border: 2px solid rgb(0, 255, 0);
+  background-color: black;
+  color: rgb(0, 255, 0);
+  outline: none;
+  width: 80%; /* Adjust width for smaller screens */
+}
+.welcome-screen .submitDiv form .botonInicio {
+  color: rgb(0, 255, 0); /* Set text color to green */
+  background-color: black; /* Set background color to black */
+  border: 2px solid rgb(0, 255, 0); /* Set border color to green */
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for color */
+  width: 80%; /* Adjust width for smaller screens */
+}
+.welcome-screen .submitDiv form .botonInicio:hover {
+  background-color: rgb(0, 255, 0); /* Change background color on hover */
+  color: black; /* Change text color on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: green;
+  }
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+  .wrapper {
+    margin: 2rem; /* Increase margin for smaller screens */
+    height: calc(100vh - 5rem); /* Adjust height to account for increased margin */
+    width: calc(100vw - 6rem); /* Adjust width to account for increased margin */
+  }
+  .welcome-screen {
+    padding: 2rem;
+  }
+  .welcome-screen .typewriter {
+    top: 10%; /* Adjust as needed */
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+  .welcome-screen .submitDiv form {
+    top: 50%; /* Adjust as needed */
+  }
+  .welcome-screen .submitDiv form input,
+  .welcome-screen .submitDiv form .botonInicio {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}/*# sourceMappingURL=WelcomeScreen.css.map */
